@@ -44,8 +44,55 @@ cd monitor-sagemaker-ml-with-ai-openscale
 
 ### 2. Create a Watson OpenScale service
 
-* Using the [IBM Cloud Dashboard](https://cloud.ibm.com/dashboard/apps) create a [Watson OpenScale](https://cloud.ibm.com/catalog/services/ai-openscale) service.
-* You will get the Watson OpenScale instance GUID when you run the notebook using the [IBM Cloud CLI](https://cloud.ibm.com/catalog/services/ai-openscale)
+Create Watson OpenScale, either on the IBM Cloud or using your On-Premise Cloud Pak for Data.
+
+<details><summary>On IBM Cloud</summary>
+
+* If you do not have an IBM Cloud account, [register for an account](https://cloud.ibm.com/registration)
+
+* Create a Watson OpenScale instance from the [IBM Cloud catalog](https://cloud.ibm.com/catalog/services/watson-openscale)
+
+* Select the *Lite* (Free) plan, enter a *Service name*, and click *Create*.
+
+* Click *Launch Application* to start Watson OpenScale.
+
+* Click *Auto setup* to automatically set up your Watson OpenScale instance with sample data.
+
+  ![ Cloud auto setup](doc/source/images/cloud-auto-setup.png)
+
+* Click *Start tour*  to tour the Watson OpenScale dashboard.
+
+</details>
+
+<details><summary>On IBM Cloud Pak for Data platform</summary>
+
+> Note: This assumes that your Cloud Pak for Data Cluster Admin has already installed and provisioned OpenScale on the cluster.
+
+* In the Cloud Pak for Data instance, go the (☰) menu and under `Services` section, click on the `Instances` menu option.
+
+  ![Service](doc/source/images/services.png)
+
+* Find the `OpenScale-default` instance from the instances table and click the three vertical dots to open the action menu, then click on the `Open` option.
+
+  ![Openscale Tile](doc/source/images/services-wos-instance.png)
+
+* If you need to give other users access to the OpenScale instance, go the (☰) menu and under `Services` section, click on the `Instances` menu option.
+
+  ![Service](doc/source/images/services.png)
+
+* Find the `OpenScale-default` instance from the instances table and click the three vertical dots to open the action menu, then click on the `Manage access` option.
+
+  ![Openscale Tile](doc/source/images/services-wos-manageaccess.png)
+
+* To add users to the service instance, click the `Add users` button.
+
+  ![Openscale Tile](doc/source/images/services-wos-addusers.png)
+
+* For all of the user accounts, select the `Editor` role for each user and then click the `Add` button.
+
+  ![Openscale Tile](doc/source/images/services-wos-userrole.png)
+
+</details>
 
 ### 3. Create a Model on Azure Machine Learning Studio
 
