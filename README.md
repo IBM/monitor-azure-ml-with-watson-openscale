@@ -18,7 +18,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 1. The developer creates a Jupyter Notebook.
 2. The Jupyter Notebook is connected to a PostgreSQL database, which is used to store Watson OpenScale data.
-3. An ML model is created using Azure ML Studio, using data from [credit_risk_training.csv](https://github.com/IBM/monitor-azure-ml-with-ai-openscale/data/credit_risk_training.csv),  and then it is deployed to the cloud.
+3. An ML model is created using Azure ML Studio, using data from [credit_risk_training.csv](https://github.com/IBM/monitor-azure-ml-with-watson-openscale/blob/master/data/credit_risk_training.csv),  and then it is deployed to the cloud.
 4. Watson Open Scale is used by the notebook to log payload and monitor performance.
 
 ## Prerequisites
