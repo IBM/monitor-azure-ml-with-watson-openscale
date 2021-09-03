@@ -33,7 +33,8 @@ When the reader has completed this Code Pattern, they will understand how to:
 1. [Clone the repository](#1-clone-the-repository)
 1. [Create a Watson OpenScale service](#2-create-a-watson-openscale-service)
 1. [Create a Model on Azure Machine Learning Studio](#3-create-a-model-on-azure-machine-learning-studio)
-1. [Run the notebook](#4-run-the-notebook)
+1. [Create a notebook in IBM Watson Studio on Cloud Pak for Data](#4-create-a-notebook-in-ibm-watson-studio-on-cloud-pak-for-data)
+1. [Run the notebook](#5-run-the-notebook)
 
 ### 1. Clone the repository
 
@@ -111,7 +112,29 @@ Create Watson OpenScale, either on the IBM Cloud or using your On-Premise Cloud 
 
   ![Create web service](doc/source/images/create-web-service.png)
 
-### 4. Run the notebook
+### 4. Create a notebook in IBM Watson Studio on Cloud Pak for Data
+
+* In [Watson Studio](https://dataplatform.cloud.ibm.com/) or your on-premise Cloud Pak for Data, click `New Project +` under Projects or, at the top of the page click `+ New` and choose the tile for `Data Science` and then `Create Project`.
+
+* Using the project you've created, click on `+ Add to project` and then choose the  `Notebook` tile, OR in the `Assets` tab under `Notebooks` choose `+ New notebook` to create a notebook.
+
+* Select the `From URL` tab. [1]
+
+* Enter a name for the notebook. [2]
+
+* Optionally, enter a description for the notebook. [3]
+
+* For `Runtime` select the `Default Spark Python 3.7 ` option. [4]
+
+* Under `Notebook URL` provide the following url: [https://raw.githubusercontent.com/IBM/monitor-azure-ml-with-watson-openscale/master/notebooks/WatsonOpenScaleAndAzureMLengine.ipynb](https://raw.githubusercontent.com/IBM/monitor-azure-ml-with-watson-openscale/master/notebooks/WatsonOpenScaleAndAzureMLengine.ipynb)
+
+> Note: The current default (as of 8/11/2021) is Python 3.8. This will cause an error when installing the `pyspark.sql SparkSession` library, so make sure that you are using Python 3.7
+
+* Click the `Create notebook` button. [6]
+
+![OpenScale Notebook Create](doc/source/images/OpenScaleNotebookCreate.png)
+
+### 5. Run the notebook
 
 * Move your cursor to each code cell and run the code in it. Read the comments for each cell to understand what the code is doing. **Important** when the code in a cell is still running, the label to the left changes to **In [\*]**:.
   Do **not** continue to the next cell until the code is finished running.
